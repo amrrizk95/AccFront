@@ -7,7 +7,6 @@ const headers = {
   const tokenKey = "token";
 
   axios.interceptors.request.use(function (config) {
-      debugger
     const token = localStorage.getItem('token');
     config.headers.Authorization =  token ? `Bearer ${token}` : '';
     return config;

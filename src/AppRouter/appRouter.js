@@ -3,10 +3,10 @@ import { BrowserRouter ,Route,Switch } from 'react-router-dom';
 import Login from '../component/Login'
 import Logout from '../component/Logout'
 import register from '../component/Register'
-import customer from '../component/Customers'
+import product from '../component/Products'
 import NotFound from '../component/Notfound'
 import Home from '../component/Home'
-import AddCustomer from '../component/addCustomer'
+import AddProduct from '../component/addProduct'
 import ProtectedRout from './ProtectedRout'
 
 class  AppRounter extends React.Component{
@@ -20,8 +20,8 @@ class  AppRounter extends React.Component{
                     <Route exact path="/login" component={Login} />
                     <Route  exact path="/register" component={register} />
                     <Route  exact  path="/logout" component={Logout}/>
-                    <ProtectedRout   path="/customer" component={customer}/>
-                    <ProtectedRout   path="/addCustomer" component={AddCustomer}/>
+                    <ProtectedRout   path="/product" component={product}/>
+                    <ProtectedRout   path="/addproduct" component={AddProduct}/>
                     <Route path="*" component={NotFound}/>
                </Switch>
                 </BrowserRouter>

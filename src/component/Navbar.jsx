@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, NavLink,BrowserRouter } from 'react-router-dom';
-import auth from '../services/authService';
+import axios from 'axios'
 import './Nav.css'
 class Navbar extends Component{
 
@@ -24,15 +24,15 @@ class Navbar extends Component{
               </li>
               <li className="nav-item">
          
-                <Link className="nav-link butons-header" to="/customer">
-                Customer
+                <Link className="nav-link butons-header" to="/product">
+                Products
                 </Link>
             
               </li>
               <li className="nav-item">
          
-              <Link className="nav-link butons-header" to="/addCustomer">
-              Add Customer
+              <Link className="nav-link butons-header" to="/addproduct">
+              Add Product
               </Link>
           
             </li>

@@ -2,7 +2,6 @@
 import React, { Component,Fragment } from 'react'
 import Navbar from '../component/Navbar'
 import {Link}from 'react-router-dom'
-import axios from 'axios'
 import {register} from '../services/userService'
 
 
@@ -54,7 +53,6 @@ class Register extends Component {
     }; 
 
     handleChange(e) {
-        console.log(this.state.data)
         const data = { ...this.state.data };
         data[e.target.name] = e.target.value;
         this.setState({ data });
@@ -72,7 +70,7 @@ class Register extends Component {
                    register(User).
                     then((res)=>{
                         const {state} = this.props.location;
-                        window.location= state? state.from.pathname: `/customer`;
+                        window.location= state? state.from.pathname: `/product`;
                     }).catch((err)=>console.log(err))
                 }catch{
                     let userNameError = "invalid user name or Password";

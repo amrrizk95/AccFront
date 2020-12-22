@@ -57,9 +57,8 @@ class Login extends Component {
                         let User=this.state.data
                         auth.login(User).
                         then((res)=>{
-                            console.log(res)
                         const {state} = this.props.location;
-                       window.location= state? state.from.pathname: `/customer`;
+                       window.location= state? state.from.pathname: `/product`;
                         }).
                         catch((err)=>{
                             let userNameError = "invalid user name or Password";
